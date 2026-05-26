@@ -1,57 +1,33 @@
-# netlify.toml — Bushman Surfboards static site
-# This site is plain HTML/CSS/JS. No build step required.
+# Netlify configuration — Bushman Surfboards
 
 [build]
   publish = "."
-  command = ""
 
-# Clean URLs: /about instead of /about.html (Netlify also does this automatically,
-# but declaring it makes intent explicit).
+# Map the old flat paths to the clean directory URLs.
 [[redirects]]
   from = "/about"
-  to = "/about.html"
-  status = 200
+  to = "/about/"
+  status = 301
+
 [[redirects]]
   from = "/press"
-  to = "/press.html"
-  status = 200
+  to = "/press/"
+  status = 301
+
 [[redirects]]
   from = "/contact"
-  to = "/contact.html"
-  status = 200
-
-# Redirect legacy Shopify paths so old inbound links don't 404.
-[[redirects]]
-  from = "/pages/about"
-  to = "/about"
-  status = 301
-[[redirects]]
-  from = "/pages/press"
-  to = "/press"
-  status = 301
-[[redirects]]
-  from = "/pages/contact"
-  to = "/contact"
-  status = 301
-[[redirects]]
-  from = "/cart"
-  to = "/"
-  status = 301
-[[redirects]]
-  from = "/account"
-  to = "/"
+  to = "/contact/"
   status = 301
 
-# Security + caching headers
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    X-Frame-Options = "SAMEORIGIN"
 
+# Long-cache static assets (filenames are stable)
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000"
