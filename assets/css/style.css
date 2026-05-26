@@ -176,10 +176,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
   font-size:clamp(3.2rem,12.5vw,10.5rem);letter-spacing:.004em;
   margin:.18em 0 .12em;
 }
-.hero-mark{display:block;width:min(640px,86vw);height:auto;
+.hero-mark{display:block;width:clamp(260px,50vw,580px);height:auto;
   filter:drop-shadow(0 2px 26px rgba(0,0,0,.4))}
-.hero h1 .thin{display:block;font-size:clamp(1rem,3.2vw,2.6rem);letter-spacing:.32em;
-  font-family:var(--ui);font-weight:600;color:#d8eae3;margin-top:.7em;text-shadow:none}
+.hero h1 .thin{display:block;font-size:clamp(.85rem,2.3vw,1.7rem);letter-spacing:.3em;
+  font-family:var(--ui);font-weight:600;color:#d8eae3;margin-top:.6em;text-shadow:none}
 .hero-sub{
   max-width:46ch;font-size:clamp(1.05rem,1.6vw,1.35rem);
   color:#f1e9dc;font-weight:400;
