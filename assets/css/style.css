@@ -5,8 +5,7 @@
    against a quiet humanist serif for the shaper's voice.
    ============================================================= */
 
-/* ----- Fonts (self-hostable via Google CSS; falls back gracefully) ----- */
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Archivo:wght@500;600;700&display=swap');
+/* ----- Fonts loaded via <link> in each page <head> for parallel fetch ----- */
 
 :root{
   /* Palette */
@@ -84,6 +83,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-glass:hover{background:var(--glass-deep);transform:translateY(-2px)}
 .btn-line{border:1.5px solid var(--ink);color:var(--ink)}
 .btn-line:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+.btn-foam{background:var(--foam);color:var(--ink)}
+.btn-foam:hover{background:var(--paper);transform:translateY(-2px)}
+.btn-line-foam{border-color:var(--foam);color:var(--foam)}
+.btn-line-foam:hover{background:var(--foam);color:var(--ink);transform:translateY(-2px)}
 .btn .arrow{transition:transform .25s ease}
 .btn:hover .arrow{transform:translateX(4px)}
 
@@ -171,10 +174,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .hero h1{
   font-family:var(--display);text-transform:uppercase;line-height:.86;
   font-size:clamp(3.2rem,12.5vw,10.5rem);letter-spacing:.004em;
-  margin:.18em 0 .12em;text-shadow:0 2px 30px rgba(0,0,0,.35);
+  margin:.18em 0 .12em;
 }
-.hero h1 .thin{display:block;font-size:.34em;letter-spacing:.32em;
-  font-family:var(--ui);font-weight:600;color:#d8eae3;margin-top:.6em;text-shadow:none}
+.hero-mark{display:block;width:min(640px,86vw);height:auto;
+  filter:drop-shadow(0 2px 26px rgba(0,0,0,.4))}
+.hero h1 .thin{display:block;font-size:clamp(1rem,3.2vw,2.6rem);letter-spacing:.32em;
+  font-family:var(--ui);font-weight:600;color:#d8eae3;margin-top:.7em;text-shadow:none}
 .hero-sub{
   max-width:46ch;font-size:clamp(1.05rem,1.6vw,1.35rem);
   color:#f1e9dc;font-weight:400;

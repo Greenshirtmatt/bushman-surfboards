@@ -74,7 +74,7 @@
   /* ---- Lazy video (click-to-load YouTube facade) ---- */
   var poster = document.querySelector('.video-poster');
   if (poster) {
-    poster.addEventListener('click', function () {
+    var loadVideo = function () {
       var id = poster.getAttribute('data-yt');
       var frame = poster.parentNode;
       var iframe = document.createElement('iframe');
@@ -84,6 +84,10 @@
       iframe.setAttribute('allowfullscreen', '');
       frame.appendChild(iframe);
       poster.remove();
+    };
+    poster.addEventListener('click', loadVideo);
+    poster.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadVideo(); }
     });
   }
 
