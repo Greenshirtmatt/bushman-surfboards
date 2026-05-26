@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bushman Surfboards — Handcrafted on the North Shore, Hawaii</title>
   <meta name="description" content="Handcrafted surfboards from master shaper Jeff Bushman. Designing, shaping and surfing on Hawaii's North Shore for more than 40 years." />
-  <meta name="theme-color" content="#15130f" />
+  <meta name="theme-color" content="#2a2620" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -18,7 +18,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Spectral:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
@@ -41,45 +41,57 @@
   </header>
 
   <main>
-    <!-- ===================== HERO ROTATOR ===================== -->
+    <!-- ===================== HERO (single, static) ===================== -->
     <section class="hero" aria-label="Featured">
       <div class="hero__stage">
-        <div class="hero__slide is-active" data-slide="0">
-          <img src="assets/img/carousel_1_hand.jpg"
-               alt="Bushman Surfboards, North Shore, Hawaii" />
-        </div>
-        <div class="hero__slide" data-slide="1">
-          <img src="assets/img/carousel_2_TamayoPerry.jpg"
-               alt="Tamayo Perry, North Shore, Hawaii" />
-        </div>
-        <div class="hero__slide" data-slide="2">
-          <img src="assets/img/carousel_3_RossClarkeJones_WaimeaBay.jpg"
-               alt="Ross Clarke-Jones, Waimea Bay, Hawaii" />
-        </div>
-        <div class="hero__slide" data-slide="3">
-          <img src="assets/img/carousel_4_Pancho-Teahupoo_9-8_.jpg"
-               alt="Pancho Sullivan, Teahupoo, Tahiti" />
+        <div class="hero__slide is-active">
+          <img src="assets/img/hero-air.jpg"
+               alt="A Bushman team rider launches a frontside air at a Hawaiian beach break" />
         </div>
       </div>
 
       <div class="hero__caption">
-        <h1 class="display hero__title" id="hero-title">Bushman<br>Surfboards</h1>
-        <p class="hero__place" id="hero-place">North Shore, Hawaii</p>
-      </div>
-
-      <div class="hero__dots" role="tablist" aria-label="Slides">
-        <button class="is-active" aria-label="Slide 1"></button>
-        <button aria-label="Slide 2"></button>
-        <button aria-label="Slide 3"></button>
-        <button aria-label="Slide 4"></button>
+        <p class="eyebrow reveal">Handcrafted in Hawaii · Since 1988</p>
+        <h1 class="display hero__title reveal" data-delay="1">Bushman<br>Surfboards</h1>
+        <p class="hero__place reveal" data-delay="2">North Shore, Hawaii</p>
+        <p class="reveal" data-delay="3" style="margin-top:1.6rem">
+          <a class="btn btn--ghost-light" href="about.html">Learn More <span class="arrow">→</span></a>
+        </p>
       </div>
     </section>
 
     <!-- ===================== STATEMENT ===================== -->
-    <section class="statement">
+    <section class="statement framed">
       <div class="wrap section">
-        <h2 class="display statement__title">Handcrafted Surfboards From Master Shaper Jeff Bushman</h2>
-        <p class="statement__sub">Designing, shaping and surfing for more than 40 years.</p>
+        <p class="eyebrow" style="color:var(--accent)">Master Shaper · Jeff Bushman</p>
+        <h2 class="display statement__title">Designing, shaping &amp; surfing for more than <em>forty years</em>.</h2>
+        <p class="statement__sub">Big-wave guns, high-performance shortboards, longboards, single-fins and fishes — each one tailored to where you surf and how you surf.</p>
+      </div>
+    </section>
+
+    <!-- ===================== RIDER / FEATURE GRID ===================== -->
+    <section class="section">
+      <div class="wrap">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:clamp(1.5rem,3vw,2.5rem)">
+          <h2 class="display" style="font-size:var(--step-2)">Tested in the<br>proving ground</h2>
+          <p class="eyebrow">Pipeline · Sunset · Waimea · Teahupoo</p>
+        </div>
+
+        <div class="grid-feature">
+          <article class="card col-8">
+            <img src="assets/img/barrel.jpg" alt="A surfer set deep inside a clean green barrel on a Bushman board" />
+          </article>
+          <article class="card col-4">
+            <img src="assets/img/hand-blank.jpg" alt="A shaper's dust-covered hand resting on a foam surfboard blank" />
+          </article>
+          <article class="card col-12">
+            <img src="assets/img/shaping-bay.jpg" alt="Jeff Bushman in his blue shaping bay holding a longboard blank" />
+            <div class="card__body">
+              <h3 class="display card__title">The shaping bay</h3>
+              <p class="card__meta">Sunset Beach · North Shore</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -106,7 +118,7 @@
     </section>
 
     <!-- ===================== CLOSING CTA ===================== -->
-    <section class="statement">
+    <section class="statement framed">
       <div class="wrap section" style="text-align:center">
         <h2 class="display" style="font-size:var(--step-3);max-width:20ch;margin-inline:auto">Order a board built for your wave.</h2>
         <p style="margin-top:1.5rem">

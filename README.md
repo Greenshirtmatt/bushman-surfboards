@@ -63,7 +63,7 @@ Once your own files are in place you can delete the `onerror=` attributes.
 ## Editing content
 
 - **Colors / type:** all in `assets/styles.css` under `:root` (the `--accent`
-  variable is the single burnt-orange accent — change it in one place).
+  variable is the dusty sea-green accent — change it in one place).
 - **Nav, footer, copy:** edit the HTML directly; each page is self-contained.
 - **Email address:** search the project for `bushmansurfboards@gmail.com` and
   replace if it changes (appears on press.html and contact.html).

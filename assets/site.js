@@ -24,41 +24,5 @@
     });
   }
 
-  // Hero rotator (home only)
-  var stage = document.querySelector(".hero__stage");
-  if (stage) {
-    var slides = Array.prototype.slice.call(stage.querySelectorAll(".hero__slide"));
-    var dots = Array.prototype.slice.call(document.querySelectorAll(".hero__dots button"));
-    var titleEl = document.getElementById("hero-title");
-    var placeEl = document.getElementById("hero-place");
-    var captions = [
-      { title: "Bushman<br>Surfboards", place: "North Shore, Hawaii" },
-      { title: "Tamayo<br>Perry", place: "North Shore, Hawaii" },
-      { title: "Ross<br>Clarke-Jones", place: "Waimea Bay, Hawaii" },
-      { title: "Pancho<br>Sullivan", place: "Teahupoo, Tahiti" }
-    ];
-    var i = 0, timer = null;
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    function go(n) {
-      i = (n + slides.length) % slides.length;
-      slides.forEach(function (s, idx) { s.classList.toggle("is-active", idx === i); });
-      dots.forEach(function (d, idx) { d.classList.toggle("is-active", idx === i); });
-      if (titleEl) titleEl.style.opacity = "0";
-      if (placeEl) placeEl.style.opacity = "0";
-      setTimeout(function () {
-        if (titleEl && captions[i]) titleEl.innerHTML = captions[i].title;
-        if (placeEl && captions[i]) placeEl.textContent = captions[i].place;
-        if (titleEl) titleEl.style.opacity = "";
-        if (placeEl) placeEl.style.opacity = "";
-      }, 300);
-    }
-    function start() { if (!reduce) timer = setInterval(function () { go(i + 1); }, 6000); }
-    function stop() { if (timer) { clearInterval(timer); timer = null; } }
-
-    dots.forEach(function (d, idx) {
-      d.addEventListener("click", function () { stop(); go(idx); start(); });
-    });
-    start();
-  }
+  // (Hero is a single static image; rotator removed.)
 })();

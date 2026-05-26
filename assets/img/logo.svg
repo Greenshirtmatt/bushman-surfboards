@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" role="img" aria-label="Bushman Surfboards">
-  <style>
-    .t { font-family: "Anton", Impact, sans-serif; font-size: 44px; letter-spacing: 1px; }
-  </style>
-  <text x="0" y="48" class="t" fill="#15130f">BUSHMAN</text>
-  <circle cx="300" cy="40" r="9" fill="#e0531f"/>
-</svg>
